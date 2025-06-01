@@ -1,0 +1,25 @@
+#predictionForm {
+    border: 1px solid red;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    border: 1px solid blue;
+    display: grid;
+    flex-direction: column;
+}
+
+.labelContainer {
+    
+}
+
+.inputContainer {
+    border: 1px solid green;
+    height: 75%;
+}
+
+.submitButton {
+    height: 50px;
+}

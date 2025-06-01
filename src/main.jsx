@@ -4,10 +4,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import App from "./App";
 import PredictionForm from "./PredictionForm.jsx";
 import AuthForm from "./createAccount.jsx";
-import { runJob } from "./results.js";
 
 const root = createRoot(document.getElementById("root"));
-runJob();
 
 root.render(
   <React.StrictMode>
@@ -15,7 +13,12 @@ root.render(
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<AuthForm />} />
-        <Route path="/PredictionForm" element={<PredictionForm />} />
+        <Route path="/PredictionForm" 
+        element={<PredictionForm
+        roundNumber={9}
+        year={2025}
+        session={"qualifying"}
+        />} />
         <Route path="/home" element={<App />} />
       </Routes>
     </BrowserRouter>
